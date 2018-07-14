@@ -1,0 +1,48 @@
+$fontDefault: 'Roboto', Arial, sans-serif
+$text: #333
+$cb: #487CBF
+$cg: #00AE5D
+
+@import 'fonts'
+@import 'libs'
+@import "_mixins/media-queries"
+
+*
+	box-sizing: border-box
+
+body
+	position: relative
+	background-color: #fff
+	background: url("../img/image_bg.png") center 20% no-repeat, url("../img/image_bg2.png") center 49% no-repeat
+	font-family: $fontDefault
+	-webkit-font-smoothing: subpixel-antialiased !important
+	-moz-osx-font-smoothing: grayscale !important
+	-osx-font-smoothing: grayscale !important
+	overflow-x: hidden
+	-webkit-backface-visibility: hidden
+	-moz-backface-visibility:    hidden
+	-ms-backface-visibility:     hidden
+	backface-visibility: 		 hidden
+
+
+@import "_blocks/elements"
+@import "_blocks/header"
+@import "_blocks/navbar"
+@import "_blocks/slider"
+@import "_blocks/advantages"
+@import "_blocks/about"
+@import "_blocks/services"
+@import "_blocks/working"
+@import "_blocks/example"
+@import "_blocks/reviews"
+@import "_blocks/sertificats"
+@import "_blocks/questions"
+@import "_blocks/partners"
+@import "_blocks/contacts"
+@import "_blocks/feedback"
+@import "_blocks/footer"
+
+@import "_blocks/modal"
+
+
+@import "media"

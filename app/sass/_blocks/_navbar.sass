@@ -1,0 +1,48 @@
+.navbar
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25)
+	padding: 16px 0
+	z-index: 9
+	width: 100%
+	top: 0
+	&.fixed
+		position: fixed
+	.logo
+		img
+			max-width: 100%
+	ul
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-content: stretch;
+		align-items: flex-start;
+		list-style: none;
+		margin-top: 20px
+		padding: 0
+		li
+			order: 0;
+			flex: 0 1 auto;
+			align-self: auto;
+			a
+				font-size: 14px
+				color: #4F4F4F
+				font-weight: bold
+				text-decoration: none
+
+@include max-screen(767px)
+	.navbar
+		.logo
+			text-align: center
+		ul
+			flex-direction: column;
+			background: #d4e7ff
+			li
+				width: 100%
+				border-bottom: 1px solid #fff
+				a
+					padding: 8px 9px
+					display: block
+					width: 100%
+					text-align: center

@@ -1,0 +1,162 @@
+.services
+	padding: 50px 0
+	.tabs
+		ul
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-content: space-between;
+			align-items: center;
+			list-style: none
+			padding: 0
+			margin: 0
+			margin-bottom: 45px
+			li
+				order: 0;
+				flex: 0 1 auto;
+				align-self: auto;
+				background: #FFFFFF;
+				border: 1px solid #00AE5D;
+				box-shadow: 0px 5px 5px rgba(0, 174, 93, 0.1)
+				width: 100%
+				text-align: center
+				cursor: pointer
+				padding: 20px 0
+				user-select: none
+				transition: all .2s
+				font-size: 14px
+				&.active
+					background: #00AE5D;
+					color: #fff
+					box-shadow: 0px 10px 10px rgba(0, 174, 93, 0.15);
+				&:first-child, &:last-child
+					max-width: 375px
+		.content
+			&__item
+				display: none
+				&.active
+					display: block
+				.item
+					position: relative
+					background: #FFFFFF
+					margin-top: 50px
+					padding: 50px 50px 85px
+					border: 1px solid #E0E0E0
+					box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25)
+					transition: all .2s
+					&:hover
+						border: 1px solid #487CBF
+						box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1)
+						.icon
+							background: #487CBF
+							.last
+								display: block
+							.first
+								display: none
+					.icon
+						background: #FFFFFF
+						border: 1px solid #E0E0E0
+						height: 90px
+						width: 90px
+						position: relative
+						top: -95px
+						display: block
+						margin: 0 auto
+						transition: all .2s
+						margin-bottom: -85px
+						.last
+							display: none
+						img
+							position: absolute
+							left: 0
+							right: 0
+							top: 0
+							bottom: 0
+							margin: auto
+							max-width: 85px
+							max-height: 85px
+							width: auto
+
+					h3
+						font-weight: 900
+						font-size: 18px
+						text-transform: uppercase
+						color: #487CBF
+					p
+						font-size: 14px
+						color: #828282
+						line-height: 21px
+					button
+						position: absolute
+						bottom: 40px
+						max-width: 260px
+						left: 0
+						right: 0
+						margin: auto
+
+				.owl-stage
+					display: flex
+					flex-wrap: wrap
+					padding-bottom: 35px
+				.owl-item
+					display: flex
+					height: auto !important
+				.owl-nav
+					text-align: center
+					-webkit-tap-highlight-color: transparent 
+					margin: auto
+					position: absolute
+					top: 0
+					left: 0
+					bottom: 0
+					right: 0
+					height: 5%
+					width: 100%
+					
+					.owl-next,
+					.owl-prev
+						background-color: rgba(0,0,0,0.30)
+						padding: 7px 7px 4px !important
+					.owl-next
+						position: absolute
+						right: 0px
+
+					.owl-prev
+						position: absolute
+						left: 0px
+
+				.owl-dots
+					text-align: center
+					-webkit-tap-highlight-color: transparent
+					position: absolute
+					bottom: -10px
+					width: 100%
+					margin: 0 auto
+
+				.owl-dots .owl-dot
+					display: inline-block
+					zoom: 1
+					*display: inline 
+
+				.owl-dots .owl-dot span
+					width: 10px
+					height: 10px
+					margin: 5px 7px
+					background: $cb
+					display: block
+					-webkit-backface-visibility: visible
+					transition: opacity 200ms ease
+					border-radius: 50% 
+
+				.owl-dots .owl-dot.active span, 
+				.owl-dots .owl-dot:hover span
+					background: transparent
+					box-shadow: 0px 0px 0px 3px $cb
+
+@include max-screen(500px)
+	.services
+		padding: 15px 0
+		.tabs
+			ul
+				flex-direction: column

@@ -1,0 +1,80 @@
+.header
+	padding: 2px 0 16px
+	background-color: #F8F8F8
+	text-align: center
+	.rowf
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: flex-start;
+		align-items: center;
+	.address, .email, .phone
+		order: 0;
+		flex: 0 1 auto;
+		align-self: auto;
+		// display: inline-block
+		position: relative
+		padding-top: 10px
+		min-width: 130px
+		span
+			display: block
+			color: #B1B0B0
+			font-size: 12px
+		a
+			font-size: 14px
+			color: $cb
+			font-weight: bold
+			text-decoration: none
+		svg
+			display: inline-block
+			height: 24px
+	.social
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: flex-start;
+		align-items: center;
+		width: 68px
+		margin-left: auto
+		margin-right: auto
+		margin-top: 14px
+		a
+			order: 0
+			flex: 0 1 auto
+			align-self: auto
+			font-size: 0
+
+	.callback
+		button
+			max-width: 200px
+			margin-top: 12px
+
+@include min-screen(768px)
+	.header
+		text-align: left
+		.rowf
+			flex-direction: row;
+		.address, .email, .phone
+			margin-left: 30px
+			a
+				font-size: 13px
+			svg
+				position: absolute
+				top: 17px
+				left: -30px
+		.address
+			svg
+				top: 15px
+
+@include min-screen(992px)
+.header
+	.email
+		margin-left: 0
+
+@include min-screen(1200px)
+	.header
+		.address, .email, .phone
+			a
+				font-size: 14px

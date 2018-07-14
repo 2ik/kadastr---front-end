@@ -1,0 +1,104 @@
+.about
+	padding: 50px 0
+	.carousel-persone
+		&__item
+			position: relative
+			img
+				width: 100%
+			.info
+				position: absolute
+				padding: 10px 0 45px
+				bottom: 0
+				width: 100%
+				background: rgba(0, 0, 0, 0.3)
+				box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25)
+			.author
+				font-size: 24px
+				margin: 0
+				font-weight: bold
+				text-align: center
+				color: #FFFFFF
+				margin-bottom: 7px
+			.status
+				font-size: 14px
+				text-align: center
+				color: #FFFFFF
+				margin: 0
+	.owl-nav
+		text-align: center
+		-webkit-tap-highlight-color: transparent 
+		margin: auto
+		position: absolute
+		left: 0
+		bottom: 37px
+		right: 0
+		height: 5%
+		width: 95%
+
+		.owl-next
+			position: absolute
+			right: 0px
+
+		.owl-prev
+			position: absolute
+			left: 0px
+
+	.owl-dots
+		text-align: center
+		-webkit-tap-highlight-color: transparent
+		position: absolute
+		bottom: 8px
+		width: 100%
+		margin: 0 auto
+
+	.owl-dots .owl-dot
+		display: inline-block
+		zoom: 1
+		*display: inline 
+
+	.owl-dots .owl-dot span
+		width: 10px
+		height: 10px
+		margin: 5px 7px
+		background: #fff
+		display: block
+		-webkit-backface-visibility: visible
+		transition: opacity 200ms ease
+		border-radius: 50% 
+
+	.owl-dots .owl-dot.active span, 
+	.owl-dots .owl-dot:hover span
+		background: transparent
+		box-shadow: 0px 0px 0px 3px #fff
+	
+	.about-text
+		position: relative
+		z-index: 2
+		margin-top: -77%
+		left: 75%
+		background: #FFFFFF;
+		border: 1px solid #E0E0E0;
+		padding: 45px 60px
+		line-height: 24px
+		box-shadow: 0px 20px 30px rgba(51, 51, 51, 0.1);
+		h1
+			font-weight: 900
+			font-size: 36px
+			text-transform: uppercase
+			color: #487CBF
+			margin-top: 0
+
+@include max-screen(991px)
+	.about
+		.about-text
+			padding: 25px 30px
+			h1
+				font-size: 24px
+@include max-screen(768px)
+	.about
+		.about-text
+			margin-top: 0
+			left: 0
+			padding: 25px 10px
+			h1
+				font-size: 24px

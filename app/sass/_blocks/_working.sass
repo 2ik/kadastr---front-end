@@ -1,0 +1,101 @@
+.working
+	padding: 10px 0 50px
+	&__item
+		cursor: pointer
+		user-select: none
+		h2
+			font-weight: bold
+			color: #333333
+			font-size: 18px
+			text-align: center
+			text-transform: uppercase
+			margin-top: 30px
+			line-height: 24px;
+			padding: 0 20px;
+		p
+			color: #828282
+			font-size: 14px
+			text-align: center
+		&:not(:last-child):after
+			content: ''
+			border-top: 5px dotted $cb
+			position: absolute
+			right: -45px
+			top: 45px
+			width: 100px
+			animation-timing-function: linear
+			animation-name: changeLine
+			animation-duration: 1s
+			animation-delay: 2s
+			animation-iteration-count: infinite
+		&:hover
+			h2
+				color: $cb
+			.icon
+				background: #487CBF
+				box-shadow: 0px 10px 22px rgba(72, 124, 191, 0.5)
+				i
+					background-color: #fff
+					color: $cb
+				.first
+					display: none
+				.last
+					display: block
+		.icon
+			border: 7px solid #487CBF
+			height: 90px
+			width: 90px
+			position: relative
+			display: block
+			margin: 0 auto
+			transition: all .2s
+			i
+				width: 36px;
+				height: 36px;
+				background: #487cbf;
+				color: #fff;
+				display: block;
+				position: absolute;
+				font-weight: 700;
+				font-style: normal;
+				font-size: 18px;
+				text-align: center;
+				text-transform: uppercase;
+				z-index: 9;
+				bottom: -7px;
+				left: -7px;
+				border: 3px solid #487cbf;
+				padding: 5px 0px 0 0;
+				transition: all .2s
+			img
+				transition: all .2s
+				position: absolute
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				margin: auto
+				max-width: 85px
+				max-height: 85px
+				width: auto
+			.last
+				display: none
+
+@-webkit-keyframes changeLine
+	0%
+		right: -40px
+	25%
+		right: -45px
+	50%
+		right: -50px
+	75%
+		right: -45px
+	100%
+		right: -40px
+
+@include max-screen(767px)
+	.working
+		padding: 35px 0 20px
+		&__item
+			&:not(:last-child):after
+				display: none

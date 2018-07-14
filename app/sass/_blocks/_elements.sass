@@ -1,0 +1,169 @@
+@import "../_mixins/plsh"
+
+
+h1,h2,h3,h4,h5
+	font-family: $fontDefault
+	font-weight: bold
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+a
+	transition: color .3s, background .3s
+	color: $cb
+	&:hover,&:focus
+		color: $cb
+
+.section-title
+	margin-bottom: 60px
+	h2
+		font-weight: 900
+		font-size: 36px
+		text-align: center
+		text-transform: uppercase
+		color: #487CBF
+
+@include max-screen(767px)
+	.section-title
+		margin-bottom: 30px
+		h2
+			font-size: 24px
+
+input
+	width: 100%
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	outline: none
+	margin: 5px 0
+	padding: 15px
+	height: 47px
+	transition: all .4s
+	&:focus
+		border-color: $cg
+
+textarea
+	@extend input
+	height: 200px
+	resize: vertical
+
+@include placeholder()
+	color: #BDBDBD
+	text-indent: 0px
+	transition: text-indent 0.5s ease
+
+@include placeholderFocus()
+	color: #BDBDBD
+	text-indent: -500px
+	transition: text-indent 0.5s ease
+
+.red
+	color: red
+
+.btn, button, a
+  outline: 0
+  outline-offset: 0
+  border: 0
+  cursor: pointer
+  border-radius: 0
+  word-break: break-word
+  text-decoration: none
+  transition: all .4s
+  &.active
+    &.focus, &:focus
+      outline: 0
+      outline-offset: 0
+  &.focus
+    outline: 0
+    outline-offset: 0
+  &:active
+    &.focus, &:focus
+      outline: 0
+      outline-offset: 0
+  &:focus
+    outline: 0
+    outline-offset: 0
+
+.btn-green
+	background-color: $cg
+	font-family: $fontDefault
+	font-size: 12px
+	min-height: 30px
+	width: 100%
+	max-width: 350px
+	padding: 6px 5px
+	color: #fff
+	&:hover, &:active, &:focus
+		background-color: #009b53
+		color: #fff
+	&.shadow
+		box-shadow: 3px 3px 6px 0px rgba(3, 174, 92, 0.41)
+
+.btn-green-big
+	background-color: $cg
+	font-family: $fontDefault
+	font-size: 14px
+	min-height: 48px
+	width: 100%
+	max-width: 350px
+	padding: 6px 5px
+	color: #fff
+	&:hover, &:active, &:focus
+		background-color: #009b53
+		color: #fff
+	&.shadow
+		box-shadow: 3px 3px 6px 0px rgba(3, 174, 92, 0.41)
+
+.btn-light
+	background-color: transparent
+	font-family: $fontDefault
+	font-size: 14px
+	min-height: 30px
+	width: 100%
+	max-width: 350px
+	padding: 6px 5px
+	color: #fff
+	border: 2px solid #FFFFFF;
+	&:hover, &:active, &:focus
+		background-color: #fff
+		color: $cb
+
+.up
+	position: fixed
+	background-color: #fff
+	bottom: 50px
+	right: 50px
+	border: 7px solid #487CBF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	width: 65px
+	height: 65px
+	z-index: 9
+	cursor: pointer
+	svg
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		margin: auto
+
+@include max-screen(767px)
+	.up
+		border: 4px solid #487cbf
+		bottom: 80px
+		right: 10px
+		width: 55px
+		height: 55px
+
+.hidden
+	display: none

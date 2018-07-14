@@ -1,0 +1,39 @@
+.partners
+	padding: 50px 0
+	.carousel-partners
+		&__item
+			img
+				width: auto
+		.owl-stage
+				display: flex
+				flex-wrap: wrap
+				padding-bottom: 35px
+		.owl-item
+			display: flex
+			height: auto !important
+		.owl-nav
+			text-align: center
+			-webkit-tap-highlight-color: transparent
+			position: absolute
+			top: 10%
+			left: 0
+			bottom: 0
+			right: 0
+			height: 0
+			width: 100%
+			
+			.owl-next,
+			.owl-prev
+				background-color: rgba(0,0,0,0.30)
+				padding: 7px 7px 4px !important
+			.owl-next
+				position: absolute
+				right: 0px
+
+			.owl-prev
+				position: absolute
+				left: 0px
+
+@include max-screen(767px)
+	.partners
+		padding: 15px 0
